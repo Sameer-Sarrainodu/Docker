@@ -1,6 +1,6 @@
 resource "aws_instance" "roboshop-docker" {
     ami = local.ami_id
-    instance_type = "t2.micro"
+    instance_type = "t2.medium"
     vpc_security_group_ids = [aws_security_group.allow_all_docker.id]
     user_data = file("docker.sh")
 
